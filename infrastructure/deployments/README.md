@@ -1,9 +1,11 @@
 # Deployments
+
 This folder contains terragrunt configurations that specify the different 
 deployments of the project.
 
 
 ## Structure
+
 The deployments folder is organized as follows:
 
 ```
@@ -30,6 +32,7 @@ commands for this project.
 
 
 ## Running Terragrunt Commands
+
 The dev directory is where you should run Terragrunt commands for the 
 development environment.
 
@@ -66,6 +69,8 @@ deployment.
 
 
 ## References
+
 * https://terragrunt.gruntwork.io/docs/
 * https://terragrunt.gruntwork.io/docs/features/execute-terraform-commands-on-multiple-modules-at-once/
 * https://terragrunt.gruntwork.io/docs/reference/cli-options/#cli-options
+* https://github.com/gruntwork-io/terragrunt-infrastructure-live-example

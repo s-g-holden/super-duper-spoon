@@ -1,3 +1,22 @@
+# Quando
+
+This application will tell you the time depending on the country code it has
+been configured with.
+
+## Structure
+
+The quando module is organized as follows:
+
+```
+.
+└── quando/         <module directory specifying quando resources>
+    ├── examples/   <terraform usage examples>
+    ├── src/        <lambda source code>
+    ├── test/       <terratest directory>
+    ├── quando/     <configuration directory for quando>
+    └── *.tf        <terraform configuration files>
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -45,3 +64,10 @@
 | <a name="output_lambda_function_invoke_arn"></a> [lambda\_function\_invoke\_arn](#output\_lambda\_function\_invoke\_arn) | The Invoke ARN of the Lambda Function |
 | <a name="output_lambda_function_name"></a> [lambda\_function\_name](#output\_lambda\_function\_name) | The name of the Lambda Function |
 <!-- END_TF_DOCS -->
+
+
+## References
+
+* https://registry.terraform.io/modules/terraform-aws-modules/lambda/aws/latest
+* https://github.com/gruntwork-io/terragrunt-infrastructure-modules-example
+* https://terratest.gruntwork.io/docs/
