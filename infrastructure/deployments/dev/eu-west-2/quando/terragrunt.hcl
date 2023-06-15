@@ -21,8 +21,8 @@ locals {
   env = local.environment_vars.locals.environment
 }
 
-
 # These are input parameters to the terraform module, consider TF_VAR_
 inputs = {
-  country_code = "DE"
+  name = "${local.env}-quando"
+  country_code = "UK"
 }
