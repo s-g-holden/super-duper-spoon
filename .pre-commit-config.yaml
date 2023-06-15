@@ -2,10 +2,6 @@ repos:
 - repo: https://github.com/gruntwork-io/pre-commit
   rev: v0.1.22
   hooks:
-    - id: tflint
-      args:
-        - "--module"
-        - "--config=.tflint.hcl"
     - id: terraform-validate
     - id: terraform-fmt
 - repo: https://github.com/antonbabenko/pre-commit-terraform

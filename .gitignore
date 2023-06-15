@@ -1,5 +1,6 @@
-# Local .terraform directories
+# IaC caches
 .terraform
+.terragrunt-cache
 
 # .tfstate files
 *.tfstate
@@ -34,8 +35,8 @@ override.tf.json
 terraform.rc
 
 # TF lock files
-!infrastructure/deployments/**/.terraform.lock.hcl
 .terraform.lock.hcl
+!infrastructure/deployments/**/.terraform.lock.hcl
 
 # Lambda
 builds/

@@ -13,19 +13,19 @@ variable "description" {
 variable "handler" {
   description = "Lambda Function entrypoint in your code"
   type        = string
-  default     = ""
+  default     = "main.handler"
 }
 
 variable "runtime" {
   description = "Lambda Function runtime"
   type        = string
-  default     = ""
+  default     = "python3.8"
 }
 
 variable "source_path" {
   description = "The absolute path to a local file or directory containing your Lambda source code"
   type        = any # string | list(string | map(any))
-  default     = null
+  default     = "../../../../../src/quando"
 }
 
 variable "country_code" {
