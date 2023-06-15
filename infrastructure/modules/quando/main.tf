@@ -6,7 +6,7 @@ module "lambda_function" {
   handler       = var.handler
   runtime       = var.runtime
 
-  source_path = var.source_path
+  source_path = "${path.module}/src"
 
   environment_variables = {
     COUNTRY_CODE = var.country_code

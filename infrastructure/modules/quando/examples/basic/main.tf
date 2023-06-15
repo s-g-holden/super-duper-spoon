@@ -16,7 +16,5 @@ module "quando" {
   handler     = "main.handler"
   runtime     = "python3.8"
 
-  source_path = "../../src"
-
   country_code = "US"
 }

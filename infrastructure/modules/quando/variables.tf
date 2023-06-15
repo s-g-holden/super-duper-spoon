@@ -22,12 +22,6 @@ variable "runtime" {
   default     = "python3.8"
 }
 
-variable "source_path" {
-  description = "The absolute path to a local file or directory containing your Lambda source code"
-  type        = any # string | list(string | map(any))
-  default     = null
-}
-
 variable "country_code" {
   description = "The country code the lambda will report time for."
   type        = string
