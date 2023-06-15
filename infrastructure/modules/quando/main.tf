@@ -1,3 +1,5 @@
+data "aws_caller_identity" "current" {}
+
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
@@ -13,6 +15,8 @@ module "lambda_function" {
   }
 
   tags = {
-    Name = "my-lambda1"
+    Name     = var.name
+    OwnerId  = data.aws_caller_identity.current.user_id
+    OwnerArn = data.aws_caller_identity.current.arn
   }
 }
