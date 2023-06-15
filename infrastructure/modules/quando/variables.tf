@@ -25,7 +25,7 @@ variable "runtime" {
 variable "source_path" {
   description = "The absolute path to a local file or directory containing your Lambda source code"
   type        = any # string | list(string | map(any))
-  default     = "../../../../../src/quando"
+  default     = null
 }
 
 variable "country_code" {

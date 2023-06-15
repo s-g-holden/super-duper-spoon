@@ -11,12 +11,12 @@ resource "random_string" "random_suffix" {
 module "quando" {
   source = "../../"
 
-  name = "quando-${random_string.random_suffix.result}"
-  description   = "A lambda function that tells the time."
-  handler       = "main.handler"
-  runtime       = "python3.8"
+  name        = "quando-${random_string.random_suffix.result}"
+  description = "A lambda function that tells the time."
+  handler     = "main.handler"
+  runtime     = "python3.8"
 
-  source_path = "../../../../../src/quando"
+  source_path = "../../src"
 
-  country_code      = "US"
+  country_code = "US"
 }
