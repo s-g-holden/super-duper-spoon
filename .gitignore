@@ -1,6 +1,8 @@
+
 # IaC caches
-.terraform
-.terragrunt-cache
+.terraform/
+.terragrunt-cache/
+.terragrunt-cache/**
 
 # .tfstate files
 *.tfstate
