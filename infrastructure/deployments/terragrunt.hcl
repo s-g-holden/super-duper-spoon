@@ -2,19 +2,13 @@
 terragrunt_version_constraint = "= 0.46.3"
 terraform_version_constraint = "= 1.5.0"
 
-locals {
-  # Automatically load environment-level variables
-  environment_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
-
-  # Automatically load region-level variables
-  region_vars = read_terragrunt_config(find_in_parent_folders("region.hcl"))
-
-  # Extract the variables we need for easy access
-  environment_name = local.environment_vars.locals.environment
-  aws_region   = local.region_vars.locals.aws_region
+terraform {
+  source = "git::git@github.com:s-g-holden/super-duper-spoon.git//infrastructure/modules/quando"
 }
 
-inputs = {
+locals {
+  environment_name = "dev"
+  aws_region   = "eu-west-2"
 }
 
 remote_state {
@@ -30,4 +24,9 @@ remote_state {
     encrypt        = true
     dynamodb_table = "terraform_locks"
   }
+}
+
+inputs = {
+  name = "${local.environment_name}-quando"
+  country_code = "UK"
 }
