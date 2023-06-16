@@ -13,5 +13,5 @@ include "envcommon" {
 
 # These are input parameters to the terraform module, consider TF_VAR_
 inputs = {
-  country_code = "UK"
+  country_code = "IE"
 }

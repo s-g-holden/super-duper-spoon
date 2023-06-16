@@ -24,7 +24,7 @@ remote_state {
     if_exists = "overwrite"
   }
   config = {
-    bucket         = "super-duper-${local.environment_name}-terraform-state"
+    bucket         = "super-duper-${local.environment_name}-${local.aws_region}-terraform-state"
     key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = local.aws_region
     encrypt        = true
